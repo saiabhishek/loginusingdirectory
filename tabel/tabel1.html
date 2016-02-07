@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>table</title>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js'></script>
+<script src="http://alasql.org/console/alasql.min.js"></script>
+<script src="http://alasql.org/console/xlsx.core.min.js"></script>
+        <script src="tabel.js"></script>
+    <script src="http://alasql.org/console/alasql.min.js"></script>
+    
+</head>
+<body ng-app="searchApp">
+<div ng-controller="search"><br>
+	<input type="text" ng-model="searchText"></br>
+searching element= {{searchText}}</br>
+<button ng-click="exportData()">Export</button>
+ 
+<table id="table1" border="1" width="100%">
+<tr>
+<th>Name</th>
+<th>class</th>
+<th>marks</th>
+<div id="exportable">
+
+	<tr ng-repeat="a in pin | filter:searchText">
+	<td> {{a.name}}</td>
+	<td> {{a.clas}}</td>
+	<td>{{a.marks}}</td>
+	</tr>
+	
+	</div>
+	</table> 
+ </div>
+</body>
