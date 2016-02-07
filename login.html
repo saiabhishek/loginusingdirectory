@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src= "login.js"></script>
+        </head>
+<body>
+
+<div ng-app="login" ng-controller="register">
+
+emailid: <input type="text" ng-model="emailid3"><br>
+password: <input type="password" ng-model="password3"><br>
+
+    <table>
+     <tr ng-repeat="a in reg1 | filter:emailid3">
+	<td> {{a.emailid}}</td>
+	<td> {{a.password}}</td>
+	
+	</tr>
+    </table>
+    
+    
+    <br>
+<input type="button" value="login" ng-click="tabel()">
+   
+    </div>
+    </body>
+</html># loginusingdirectory login.hs main.html register.html
+# loginusingdirectory login.js main.html register.html
